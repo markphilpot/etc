@@ -1,0 +1,50 @@
+#!/usr/bin/perl -w
+
+my $pwd=`pwd`;
+
+my @parts = split("/", $pwd);
+my $level = (scalar(@parts)-1);
+# Want to show which directory we are going to
+$level--;
+
+print $pwd;
+
+my $last_index = 0;
+my $index = 0;
+
+while( $index != -1 && $level >= 1)
+{
+    $index = index($pwd, "/", $index);
+    my $space = "";
+
+    my $double_digit_level = 0;
+# Needs to be 8 because we print the spacer first
+    if( $level > 8 )
+    {
+        $double_digit_level = 1;
+    }
+
+    for( $i=0; $i < ($index - $last_index)-1; $i++)
+    {
+        if($double_digit_level)
+        {
+# When we print the double digit level, we need to
+# leave off on "spacer"
+            $double_digit_level = 0;
+        }
+        else
+        {
+            $space.=".";
+        }
+    }
+
+    if($index != -1)
+    {
+        print $space.$level;
+        $last_index = $index;
+        $index++;
+        $level--;
+    }
+}
+
+print "\n";

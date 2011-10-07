@@ -1,4 +1,9 @@
 Mark Philpot
 mark.philpot@gmail.com
 
-My collection of home dot files
+My collection of home dot files and utility scripts
+
+Dependencies
+
+    * bash-completion
+    * git-core
