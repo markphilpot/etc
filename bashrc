@@ -103,6 +103,10 @@ fi
 
 alias l='$HOME/etc/showlevel'
 
+export M2_HOME="/opt/apache-maven-2.2.1"
+export MAVEN_OPTS="-XX:MaxPermSize=512M"
+export PATH="$M2_HOME/bin:$PATH"
+
 function k
 {
     level=$1
