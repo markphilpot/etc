@@ -102,6 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias l='$HOME/etc/showlevel'
+alias server='python -m SimpleHTTPServer'
 
 export M2_HOME="/opt/apache-maven-2.2.1"
 export MAVEN_OPTS="-XX:MaxPermSize=512M"
