@@ -6,3 +6,5 @@
     br = branch
     co = checkout
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+	quotepath = false
