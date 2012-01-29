@@ -1,5 +1,6 @@
 " ============ Pathogen ================
 call pathogen#infect()
+call pathogen#helptags()
 
 " ============ Indentation =============
 set autoindent
