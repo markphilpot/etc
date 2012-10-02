@@ -108,6 +108,8 @@ export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=512M"
 export PATH="$M2_HOME/bin:$PATH"
 
+export no_proxy="$no_proxy,dbwiki"
+
 function k
 {
     level=$1
@@ -119,3 +121,6 @@ function k
 
     cd $cdback
 }
+
+bind '"\e[5~": history-search-backward'
+bind '"\e[6~": history-search-forward'
