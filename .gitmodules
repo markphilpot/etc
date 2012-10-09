@@ -19,3 +19,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = http://github.com/robbyrussell/oh-my-zsh.git
+[submodule "lib/supergenpass"]
+	path = lib/supergenpass
+	url = http://github.com/gfxmonk/supergenpass.git
