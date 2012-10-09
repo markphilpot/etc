@@ -36,3 +36,23 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+alias l='$HOME/etc/showlevel'
+alias server='python -m SimpleHTTPServer'
+
+export M2_HOME="$HOME/etc/maven"
+export MAVEN_OPTS="-XX:MaxPermSize=256M"
+export PATH="$M2_HOME/bin:$PATH"
+
+export no_proxy="$no_proxy,dbwiki"
+
+function k
+{
+    level=$1
+    cdback=""
+    for i in `seq 1 $level`
+    do
+        cdback=$cdback"../"
+    done
+
+    cd $cdback
+}
