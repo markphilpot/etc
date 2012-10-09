@@ -38,10 +38,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
 alias server='python -m SimpleHTTPServer'
+alias gpm='git co master; git pull; git co develop'
 
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
-export PATH="$M2_HOME/bin:$PATH"
+export PATH="$M2_HOME/bin:$HOME/etc/bin:$PATH"
 
 export no_proxy="$no_proxy,dbwiki"
 
