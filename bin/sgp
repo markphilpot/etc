@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+$HOME/etc/lib/supergenpass/core/sgp -q -l 16 $1 | xclip
