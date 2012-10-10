@@ -7,3 +7,4 @@ Dependencies
 
     * bash-completion
     * git-core
+    * ctags/etags
