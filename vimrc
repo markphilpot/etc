@@ -26,5 +26,9 @@ let python_highlight_all = 1
 " ============ Solarized ===============
 set t_Co=256
 let g:solarized_termcolors=256
-set background=dark
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 colorscheme solarized
