@@ -2,9 +2,12 @@
 	name = Mark Philpot
 	email = mark.philpot@gmail.com
 [alias]
-    st = status
+    s = status --short --ignore-submodules=dirty
     br = branch
     co = checkout
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
+[difftool]
+    prompt = false
 [core]
 	quotepath = false
+	editor = vim

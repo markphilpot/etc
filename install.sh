@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig vimrc vim"
+FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc"
 
 for i in $FILES
 do

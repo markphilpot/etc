@@ -104,9 +104,11 @@ fi
 alias l='$HOME/etc/showlevel'
 alias server='python -m SimpleHTTPServer'
 
-export M2_HOME="/opt/apache-maven-2.2.1"
+export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=512M"
 export PATH="$M2_HOME/bin:$PATH"
+
+export no_proxy="$no_proxy,dbwiki"
 
 function k
 {
@@ -119,3 +121,6 @@ function k
 
     cd $cdback
 }
+
+bind '"\e[5~": history-search-backward'
+bind '"\e[6~": history-search-forward'

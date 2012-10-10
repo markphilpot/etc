@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+"""
+Pretty Print JSON
+
+Usage:
+    ppjson [inputFile] [outputFile]
+"""
+
+import sys
+import json
+
+def main(args):
+    try:
+        if len(args) == 1:
+            print json.dumps(json.loads(sys.stdin.read()), indent=3)
+            return True
+        elif len(args) == 2:
+            inFile = open(args[1])
+            inStr = inFile.read()
+            jsonObj = json.loads(inStr)
+            inFile.close()
+            print json.dumps(jsonObj, sort_keys=False, indent=3)
+        elif len(args) == 3:
+            inFile = open(args[1])
+            inStr = inFile.read()
+            jsonObj = json.loads(inStr)
+            inFile.close()
+            outFile = open(args[2], "w")
+            json.dump(jsonObj, outFile, sort_keys=False, indent=3)
+            outFile.close()
+
+    except IndexError:
+        usage()
+        return False
+        
+    return True
+
+def usage():
+    print __doc__
+
+if __name__ == "__main__":
+    sys.exit(not main(sys.argv))
