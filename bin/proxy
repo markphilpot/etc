@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+echo http_proxy=$http_proxy
+echo https_proxy=$https_proxy
+echo no_proxy=$no_proxy
+
+echo "export http_proxy=$http_proxy; export https_proxy=$https_proxy; export no_proxy=$no_proxy"
