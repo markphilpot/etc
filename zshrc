@@ -40,7 +40,8 @@ alias l='$HOME/etc/showlevel'
 alias server='python -m SimpleHTTPServer'
 alias gpm='git co master; git pull; git co develop'
 alias sc='screen -D -R'
-alias scl='screen -ls'
+alias sl='screen -ls'
+alias st='screen -t'
 
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
