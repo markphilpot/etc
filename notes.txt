@@ -1,0 +1,14 @@
+virtualenvwrapper -- http://www.doughellmann.com/articles/pythonmagazine/completely-different/2008-05-virtualenvwrapper/index.html
+    Integrate it with the oh-my-zsh plugin
+
+puppet -- "pull" part of deployment
+    the client/server puppetmaster configuration is overkill unless I'm managing a bunch of servers with the hostname setup correctly
+
+fabric -- "push" part of deployment
+    http://agiletesting.blogspot.com/2010/03/automated-deployments-with-fabric-tips.html
+
+
+TODO
+    Create a fabfile that does an initial push (apt-get install puppet)
+    Control puppet manifests (.pp) and use fabric to apply them (puppet apply)
+    Initial manifests will declaratively setup the machine correctly
