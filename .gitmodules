@@ -22,3 +22,6 @@
 [submodule "lib/supergenpass"]
 	path = lib/supergenpass
 	url = http://github.com/gfxmonk/supergenpass.git
+[submodule "lib/python-jira-cli"]
+	path = lib/python-jira-cli
+	url = http://github.com/trentm/python-jira-cli.git
