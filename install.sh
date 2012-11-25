@@ -19,3 +19,6 @@ ln -s $PWD/awesome $HOME/.config/awesome
 echo "Xresources"
 rm -rf $HOME/.Xresources
 ln -s $PWD/solarized/xresources-colors-solarized/Xresources $HOME/.Xresources
+
+echo "Konsole Solarized Dark"
+cp $PWD/lib/konsole-colors-solarized/Solarized\ Dark.colorscheme $HOME/.kde/share/apps/konsole/SolarizedDark.colorscheme

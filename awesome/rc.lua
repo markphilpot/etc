@@ -15,6 +15,8 @@ require("debian.menu")
 -- Teardrop terminal
 require("lib/teardrop")
 
+require("vicious")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -52,6 +54,20 @@ beautiful.init(awesome_config .. "/themes/solarized/solarized/theme.lua")
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+lockscreen = "xscreensaver-command -lock"
+
+-- Load and configure the clock
+require("obvious.clock")
+obvious.clock.set_editor(editor)
+obvious.clock.set_shortformat(function ()
+    local week = tonumber(os.date("%W"))
+    return obvious.lib.markup.fg.color("#009000", "⚙ ") .. "%I:%M %a %m/%d "
+end)
+obvious.clock.set_longformat(function ()
+    local week = tonumber(os.date("%W"))
+    return obvious.lib.markup.fg.color("#009000", "⚙ ") .. "%I:%M %a %m/%d "
+end)
+
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -193,7 +209,8 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
-        mytextclock,
+        obvious.clock(),
+        --mytextclock,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -266,7 +283,15 @@ globalkeys = awful.util.table.join(
                   mypromptbox[mouse.screen].widget,
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
-              end)
+              end),
+
+    -- teardrop
+    awful.key({ modkey }, "`",
+              function ()
+                  teardrop("konsole", "top", "middle", .8, .8, true, 1)
+              end),
+
+    awful.key({ modkey }, "BackSpace", function () awful.util.spawn(lockscreen) end)
 )
 
 clientkeys = awful.util.table.join(

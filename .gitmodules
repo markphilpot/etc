@@ -31,3 +31,6 @@
 [submodule "lib/dircolors-solarized"]
 	path = lib/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "lib/konsole-colors-solarized"]
+	path = lib/konsole-colors-solarized
+	url = http://github.com/phiggins/konsole-colors-solarized.git
