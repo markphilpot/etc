@@ -39,6 +39,7 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-di
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
+eval `dircolors $HOME/etc/solarized_dark_dircolors`
 
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
