@@ -25,3 +25,9 @@
 [submodule "lib/python-jira-cli"]
 	path = lib/python-jira-cli
 	url = http://github.com/trentm/python-jira-cli.git
+[submodule "lib/gnome-terminal-colors-solarized"]
+	path = lib/gnome-terminal-colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "lib/dircolors-solarized"]
+	path = lib/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git

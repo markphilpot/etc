@@ -1,0 +1,5 @@
+URxvt*font:                 xft:Monaco for Powerline:regular:size=8
+URxvt*imFont:               xft:Monaco for Powerline:regular:size=8
+URxvt*boldFont:             xft:Monaco for Powerline:bold:size=8
+URxvt*italicFont:           xft:Monaco for Powerline:italic:size=8
+URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=8
