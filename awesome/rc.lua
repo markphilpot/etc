@@ -14,7 +14,7 @@ require("debian.menu")
 
 -- Teardrop terminal
 require("lib/teardrop")
-
+require("shifty")
 require("vicious")
 
 -- Popup command prompt
@@ -77,6 +77,15 @@ obvious.clock.set_longformat(function ()
     return obvious.lib.markup.fg.color("#009000", "⚙ ") .. "%I:%M %a %m/%d "
 end)
 
+-- Shifty Config
+shifty.config.defaults = {
+    layout = awful.layout.suit.floating,
+    ncol = 1,
+    mwfact = 0.60,
+    floatBars = true,
+    guess_name = true,
+    guess_position = true,
+}
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -166,6 +175,9 @@ mytaglist.buttons = awful.util.table.join(
                     awful.button({ }, 4, awful.tag.viewnext),
                     awful.button({ }, 5, awful.tag.viewprev)
                     )
+
+shifty.taglist = mytaglist
+
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
                      awful.button({ }, 1, function (c)
@@ -318,7 +330,16 @@ globalkeys = awful.util.table.join(
                   teardrop("konsole", "top", "middle", .8, .8, true, 1)
               end),
 
-    awful.key({ modkey }, "BackSpace", function () awful.util.spawn(lockscreen) end)
+    awful.key({ modkey }, "BackSpace", function () awful.util.spawn(lockscreen) end),
+
+    -- Shifty Config
+    awful.key({modkey}, "t", function() shifty.add({ rel_index = 1 }) end),
+    awful.key({modkey, "Control"},
+            "t",
+            function() shifty.add({ rel_index = 1, nopopup = true }) end
+            ),
+    awful.key({modkey, "Shift"}, "r", shifty.rename),
+    awful.key({modkey}, "w", shifty.del)
 )
 
 clientkeys = awful.util.table.join(
@@ -388,6 +409,8 @@ clientbuttons = awful.util.table.join(
 
 -- Set keys
 root.keys(globalkeys)
+shifty.config.globalkeys = globalkeys
+shifty.config.clientkeys = clientkeys
 -- }}}
 
 -- {{{ Rules
