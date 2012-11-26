@@ -34,3 +34,6 @@
 [submodule "lib/konsole-colors-solarized"]
 	path = lib/konsole-colors-solarized
 	url = http://github.com/phiggins/konsole-colors-solarized.git
+[submodule "awesome/shifty"]
+	path = awesome/shifty
+	url = http://github.com/bioe007/awesome-shifty.git
