@@ -17,6 +17,15 @@ require("lib/teardrop")
 
 require("vicious")
 
+-- Popup command prompt
+require("obvious.popup_run_prompt")
+obvious.popup_run_prompt.set_opacity( 0.7 )
+obvious.popup_run_prompt.set_prompt_string( "$> " )
+obvious.popup_run_prompt.set_slide( true )
+obvious.popup_run_prompt.set_width( 0.5 )
+obvious.popup_run_prompt.set_height( 18 )
+obvious.popup_run_prompt.set_border_width( 1 )
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -131,6 +140,16 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
+-- Sound volume
+volumewidget = widget ({ type = "textbox" })
+vicious.register( volumewidget, vicious.widgets.volume, " $2 $1% ", 4, "Master" )
+volumewidget:buttons(awful.util.table.join(
+    awful.button({ }, 1, function () awful.util.spawn("amixer -q sset Master toggle", false) end),
+    awful.button({ }, 2, function () awful.util.spawn("urxvt -e alsamixer", true) end),
+    awful.button({ }, 4, function () awful.util.spawn("amixer -q sset Master 1dB+", false) end),
+    awful.button({ }, 5, function () awful.util.spawn("amixer -q sset Master 1dB-", false) end)
+))
+
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
@@ -210,6 +229,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         obvious.clock(),
+        volumewidget,
         --mytextclock,
         s == 1 and mysystray or nil,
         mytasklist[s],
@@ -281,7 +301,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
+    --awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey },            "r",     obvious.popup_run_prompt.run_prompt),
 
     awful.key({ modkey }, "x",
               function ()
