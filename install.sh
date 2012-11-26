@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xdefaults"
+FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xdefaults fonts.conf"
 
 for i in $FILES
 do
