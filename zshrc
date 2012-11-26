@@ -40,8 +40,8 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
 eval `dircolors $HOME/etc/lib/dircolors-solarized/dircolors.256dark`
-xrdb -merge ~/.Xresources
-xrdb -merge ~/.Xdefaults
+xrdb -load $HOME/.Xresources
+xrdb -merge $HOME/.Xdefaults
 
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
