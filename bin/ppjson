@@ -1,37 +1,49 @@
 #!/usr/bin/python
 
-"""
-Pretty Print JSON
-
-Usage:
-    ppjson [inputFile] [outputFile]
-"""
-
 import sys
 import json
+from optparse import OptionParser
 
 def main(args):
+
+    usage = "Usage: %s [options] [inputfile] [outputfile]" % args[0]
+
+    parser = OptionParser(usage)
+    parser.add_option('-p', '--pretty', dest='pretty', action="store_true", default=False, help="Pretty Print")
+    parser.add_option('-i', '--indent', dest='indent', default=3, help="# of spaces to indent (requires -p)")
+    parser.add_option('-s', '--sort', dest='sort', default=False, help="Sort object keys")
+
+    (options, args) = parser.parse_args()
+
     try:
-        if len(args) == 1:
-            print json.dumps(json.loads(sys.stdin.read()), indent=3)
-            return True
+        if len(args) == 0:
+            if options.pretty:
+                print json.dumps(json.loads(sys.stdin.read()), indent=options.indent, sort_keys=options.sort)
+            else:
+                print json.dumps(json.loads(sys.stdin.read()), sort_keys=options.sort)
+        elif len(args) == 1:
+            inFile = open(args[0])
+            inStr = inFile.read()
+            jsonObj = json.loads(inStr)
+            inFile.close()
+            if options.pretty:
+                print json.dumps(jsonObj, indent=options.indent, sort_keys=options.sort)
+            else:
+                print json.dumps(jsonObj, sort_keys=options.sort)
         elif len(args) == 2:
-            inFile = open(args[1])
+            inFile = open(args[0])
             inStr = inFile.read()
             jsonObj = json.loads(inStr)
             inFile.close()
-            print json.dumps(jsonObj, sort_keys=False, indent=3)
-        elif len(args) == 3:
-            inFile = open(args[1])
-            inStr = inFile.read()
-            jsonObj = json.loads(inStr)
-            inFile.close()
-            outFile = open(args[2], "w")
-            json.dump(jsonObj, outFile, sort_keys=False, indent=3)
+            outFile = open(args[1], "w")
+            if options.pretty:
+                json.dump(jsonObj, outFile, indent=options.indent, sort_keys=options.sort)
+            else:
+                json.dump(jsonObj, outFile, sort_keys=options.sort)
             outFile.close()
 
-    except IndexError:
-        usage()
+    except IndexError, e:
+        print e
         return False
         
     return True

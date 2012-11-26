@@ -40,6 +40,11 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-di
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+eval `dircolors $HOME/etc/lib/dircolors-solarized/dircolors.256dark`
+xrdb -load $HOME/.Xresources
+xrdb -merge $HOME/.Xdefaults
+
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
 alias server='python -m SimpleHTTPServer'
@@ -48,9 +53,10 @@ alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
 
+export JAVA_HOME="/opt/jdk"
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
-export PATH="$M2_HOME/bin:$HOME/etc/bin:$PATH"
+export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/jdk/bin:$PATH"
 
 export no_proxy="$no_proxy,dbwiki"
 

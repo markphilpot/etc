@@ -1,0 +1,1 @@
+Move fonts into ~/.fonts and run fc-cache -vf
