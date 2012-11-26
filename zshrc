@@ -16,6 +16,8 @@ DEFAULT_USER="mphilpot"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+RM_STAR_SILENT="true"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -39,6 +41,9 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-di
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
+eval `dircolors $HOME/etc/lib/dircolors-solarized/dircolors.256dark`
+xrdb -load $HOME/.Xresources
+xrdb -merge $HOME/.Xdefaults
 
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
