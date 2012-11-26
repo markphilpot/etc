@@ -16,6 +16,8 @@ DEFAULT_USER="mphilpot"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+RM_STAR_SILENT="true"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
