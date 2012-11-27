@@ -48,7 +48,7 @@ alias st='screen -t'
 
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
-export PATH="$M2_HOME/bin:$HOME/etc/bin:$PATH"
+export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:$PATH"
 
 export no_proxy="$no_proxy,dbwiki"
 
