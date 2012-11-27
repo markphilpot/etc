@@ -1,1 +1,1 @@
-zsh ctags awesome awesome-extra rxvt-unicode-256color konsole
+zsh ctags awesome awesome-extra rxvt-unicode-256color konsole nitrogen
