@@ -18,6 +18,7 @@ require("lib/teardrop")
 require("shifty")
 require("vicious")
 
+require("obvious.battery")
 -- Popup command prompt
 require("obvious.popup_run_prompt")
 obvious.popup_run_prompt.set_opacity( 0.7 )
@@ -244,6 +245,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         obvious.clock(),
         volumewidget,
+        obvious.battery(),
         --mytextclock,
         s == 1 and mysystray or nil,
         mytasklist[s],
