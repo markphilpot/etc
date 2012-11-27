@@ -509,3 +509,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 awful.util.spawn_with_shell("gnome-settings-daemon")
+awful.util.spawn_with_shell("conky -c " .. awesome_config .. "/awesome_statusbar")
