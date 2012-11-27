@@ -47,3 +47,6 @@ ${goto 120}${upspeed eth0} \
 ${goto 170}${downspeed eth0} \
 ${goto 220}${cpubar cpu0 5,50} \
 ${goto 300}${membar 5,50}
+${goto 15}${addr wlan0} \
+${goto 120}${upspeed wlan0} \
+${goto 170}${downspeed wlan0} \
