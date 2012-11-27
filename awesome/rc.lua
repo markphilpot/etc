@@ -14,8 +14,6 @@ require("debian.menu")
 
 -- Teardrop terminal
 require("lib/teardrop")
--- run_once function - place calles at the bottom of rc..
-require("lib/run_once")
 
 require("shifty")
 require("vicious")
@@ -508,4 +506,4 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-run_once("gnome-settings-daemon")
+awful.util.spawn_with_shell("gnome-settings-daemon")
