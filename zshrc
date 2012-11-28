@@ -41,9 +41,15 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-di
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
-eval `dircolors $HOME/etc/lib/dircolors-solarized/dircolors.256dark`
-xrdb -load $HOME/.Xresources
-xrdb -merge $HOME/.Xdefaults
+
+which dircolors > /dev/null
+if [[ $? -eq 0 ]] then eval `dircolors $HOME/etc/lib/dircolors-solarized/dircolors.256dark`; fi
+
+which xrdb > /dev/null
+if [[ $? -eq 0 ]] then
+    xrdb -load $HOME/.Xresources
+    xrdb -merge $HOME/.Xdefaults
+fi
 
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'

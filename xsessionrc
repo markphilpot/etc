@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xrdb -load "${HOME}/.Xresources"
+xrdb -merge "${HOME}/.Xdefaults"
