@@ -34,3 +34,6 @@
 [submodule "awesome/shifty"]
 	path = awesome/shifty
 	url = http://github.com/griphiam/awesome-shifty.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/griphiam/oh-my-zsh.git
