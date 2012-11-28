@@ -16,9 +16,6 @@
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = http://github.com/griphiam/oh-my-zsh.git
 [submodule "lib/supergenpass"]
 	path = lib/supergenpass
 	url = http://github.com/gfxmonk/supergenpass.git
