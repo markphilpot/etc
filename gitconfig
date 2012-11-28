@@ -5,6 +5,7 @@
     s = status --short --ignore-submodules=dirty
     br = branch
     co = checkout
+    ci = commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -17,6 +18,9 @@
     gr = grep -Ii
 
     la = "!git config -l | grep alias | cut -c 7-"
+
+    out = log --pretty=oneline --abbrev-commit --graph ..@{u}
+    in = !git fetch && git log --pretty=oneline --abbrev-commit --graph @{u}..
 [difftool]
     prompt = false
 [core]
