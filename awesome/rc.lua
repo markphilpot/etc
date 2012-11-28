@@ -28,6 +28,12 @@ obvious.popup_run_prompt.set_width( 0.5 )
 obvious.popup_run_prompt.set_height( 18 )
 obvious.popup_run_prompt.set_border_width( 1 )
 
+require("menubar")
+menubar.cache_entries = true
+menubar.app_folders = { "/usr/share/applications/" }
+menubar.show_categories = true   -- Change to false if you want only programs to appear in the menu
+--menubar.set_icon_theme("theme name")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -347,7 +353,10 @@ globalkeys = awful.util.table.join(
             function() shifty.add({ rel_index = 1, nopopup = true }) end
             ),
     awful.key({modkey, "Shift"}, "r", shifty.rename),
-    awful.key({modkey}, "w", shifty.del)
+    awful.key({modkey}, "w", shifty.del),
+
+    -- Menubar
+    awful.key({ modkey }, "p", function () menubar.show() end)
 )
 
 clientkeys = awful.util.table.join(

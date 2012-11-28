@@ -37,3 +37,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/griphiam/oh-my-zsh.git
+[submodule "awesome/menubar"]
+	path = awesome/menubar
+	url = https://github.com/griphiam/menubar.git
