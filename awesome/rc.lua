@@ -333,7 +333,7 @@ globalkeys = awful.util.table.join(
               end),
 
     -- teardrop
-    awful.key({ modkey }, "`",
+    awful.key({ }, "F12",
               function ()
                   teardrop("konsole", "top", "middle", .8, .8, true, 1)
               end),
