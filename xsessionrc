@@ -1,4 +1,11 @@
 #!/bin/sh
 
-xrdb -load "${HOME}/.Xresources"
-xrdb -merge "${HOME}/.Xdefaults"
+#which xrdb > /dev/null
+#if [[ $? -eq 0 ]] then
+    xrdb -load "${HOME}/.Xresources"
+#fi
+
+#which dircolors > /dev/null
+#if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
+
+eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`
