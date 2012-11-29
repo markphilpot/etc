@@ -356,7 +356,7 @@ globalkeys = awful.util.table.join(
     awful.key({modkey}, "w", shifty.del),
 
     -- Menubar
-    awful.key({ modkey }, "p", function () menubar.show() end)
+    awful.key({ modkey }, "s", function () menubar.show() end)
 )
 
 clientkeys = awful.util.table.join(
