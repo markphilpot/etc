@@ -535,3 +535,4 @@ end
 
 run_once("gnome-settings-daemon")
 run_once("conky", "-c " .. awesome_config .. "/awesome_statusbar")
+run_once("nm-applet")

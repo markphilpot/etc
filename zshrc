@@ -42,6 +42,9 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
 
+which dircolors > /dev/null
+if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
+
 # Customize to your needs...
 alias l='$HOME/etc/showlevel'
 alias server='python -m SimpleHTTPServer'
