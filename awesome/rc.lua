@@ -354,9 +354,11 @@ globalkeys = awful.util.table.join(
             ),
     awful.key({modkey, "Shift"}, "r", shifty.rename),
     awful.key({modkey}, "w", shifty.del),
+    awful.key({modkey, "Control"}, "Left", shifty.shift_prev),
+    awful.key({modkey, "Control"}, "Right", shifty.shift_next),
 
     -- Menubar
-    awful.key({ modkey }, "s", function () menubar.show() end)
+    awful.key({ "Control" }, "space", function () menubar.show() end)
 )
 
 clientkeys = awful.util.table.join(
@@ -536,3 +538,4 @@ end
 run_once("gnome-settings-daemon")
 run_once("conky", "-c " .. awesome_config .. "/awesome_statusbar")
 run_once("nm-applet")
+run_once("xscreensaver -nosplash")
