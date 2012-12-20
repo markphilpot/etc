@@ -76,11 +76,22 @@ URxvt*color14:               S_base1
 URxvt*color7:                S_base2
 URxvt*color15:               S_base3
 
-URxvt*font:                 xft:Monaco for Powerline:regular:size=8
-URxvt*imFont:               xft:Monaco for Powerline:regular:size=8
-URxvt*boldFont:             xft:Monaco for Powerline:bold:size=8
-URxvt*italicFont:           xft:Monaco for Powerline:italic:size=8
-URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=8
+URxvt*font:                 xft:Monaco for Powerline:regular:size=8.5
+URxvt*imFont:               xft:Monaco for Powerline:regular:size=8.5
+URxvt*boldFont:             xft:Monaco for Powerline:bold:size=8.5
+URxvt*italicFont:           xft:Monaco for Powerline:italic:size=8.5
+URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=8.5
 
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
+
+!!URxvt*shading: 10
+!!URxvt*transparent: true
+URxvt*depth: 32
+!!URxvt*background: [90]S_base03
+URxvt*background: [90]#000000
+URxvt*iconFile: /usr/share/icons/Humanity/apps/16/terminal.svg
+
+!!URxvt*perl-lib: /usr/lib/urxvt/perl/
+!!URxvt*perl-ext-common: default,tabbed

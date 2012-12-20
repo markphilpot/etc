@@ -1,1 +1,1 @@
-zsh ctags awesome awesome-extra rxvt-unicode-256color konsole nitrogen qt4-qtconfig xfe weechat rsstail
+zsh ctags awesome awesome-extra rxvt-unicode-256color konsole nitrogen qt4-qtconfig xfe weechat rsstail xcompmgr
