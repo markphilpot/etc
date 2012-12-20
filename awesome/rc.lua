@@ -343,6 +343,10 @@ globalkeys = awful.util.table.join(
               function ()
                   teardrop("konsole", "top", "middle", .9, .8, true, 1)
               end),
+    awful.key({ modkey }, "`",
+              function ()
+                  teardrop("konsole", "top", "middle", .9, .8, true, 1)
+              end),
 
     awful.key({ modkey }, "BackSpace", function () awful.util.spawn(lockscreen) end),
 
