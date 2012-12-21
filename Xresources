@@ -90,7 +90,7 @@ URxvt*scrollstyle: plain
 !!URxvt*transparent: true
 URxvt*depth: 32
 !!URxvt*background: [90]S_base03
-URxvt*background: [90]#000000
+URxvt*background: [85]#000000
 URxvt*iconFile: /usr/share/icons/Humanity/apps/16/terminal.svg
 
 !!URxvt*perl-lib: /usr/lib/urxvt/perl/

@@ -36,7 +36,7 @@ RM_STAR_SILENT="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-directory-history django virtualenvwrapper)
+plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-directory-history django)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,6 +52,7 @@ alias gpm='git co master; git pull; git co develop'
 alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
+alias open='xdg-open'
 
 export JAVA_HOME="/opt/jdk"
 export M2_HOME="$HOME/etc/maven"
