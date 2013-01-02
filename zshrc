@@ -46,12 +46,13 @@ which dircolors > /dev/null
 if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
 
 # Customize to your needs...
-alias l='$HOME/etc/showlevel'
+alias l='$HOME/etc/bin/showlevel'
 alias server='python -m SimpleHTTPServer'
 alias gpm='git co master; git pull; git co develop'
 alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
+alias open='xdg-open'
 
 export JAVA_HOME="/opt/jdk"
 export M2_HOME="$HOME/etc/maven"
