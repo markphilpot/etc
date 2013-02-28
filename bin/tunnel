@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+LOCAL_PORT=$1
+DEST_HOST=$2
+DEST_PORT=$3
+VIA_HOST=$4
+
+ssh -vv -N -o ExitOnForwardFailure=yes -L $LOCAL_PORT:$DEST_HOST:$DEST_PORT $VIA_HOST

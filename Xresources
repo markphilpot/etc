@@ -93,5 +93,10 @@ URxvt*depth: 32
 URxvt*background: [85]#000000
 URxvt*iconFile: /usr/share/icons/Humanity/apps/16/terminal.svg
 
+URxvt*saveLines: 10000
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
 !!URxvt*perl-lib: /usr/lib/urxvt/perl/
 !!URxvt*perl-ext-common: default,tabbed
