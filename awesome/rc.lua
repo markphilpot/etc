@@ -506,6 +506,12 @@ client.add_signal("manage", function (c, startup)
     --     end
     -- end)
 
+    c:add_signal("property::geometry", function(c)
+       if ((awful.layout.get(mouse.screen) == awful.layout.suit.floating) or (awful.client.floating.get(c) == true)) then
+           floatgeoms[c.window] = c:geometry()
+       end
+    end)
+
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
@@ -522,6 +528,28 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Remember floating window positions
+floatgeoms = {}
+
+for s = 1, screen.count() do
+  awful.tag.attached_add_signal(s, "property::layout", function(t)
+    for k, c in ipairs(t:clients()) do
+      if ((awful.layout.get(mouse.screen) == awful.layout.suit.floating) or (awful.client.floating.get(c) == true)) then
+        c:geometry(floatgeoms[c.window])
+      end
+    end
+    client.add_signal("unmanage", function(c) floatgeoms[c.window] = nil end)
+  end)
+end
+
+client.add_signal("unmanage", function(c) floatgeoms[c.window] = nil end)    
+
+client.add_signal("manage", function(c)
+   if ((awful.layout.get(mouse.screen) == awful.layout.suit.floating) or (awful.client.floating.get(c) == true)) then
+       floatgeoms[c.window] = c:geometry()
+   end
+end)
 
 function run_once(prg,arg_string,pname,screen)
     if not prg then
