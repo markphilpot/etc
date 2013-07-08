@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Autoload screen if we aren't in it.  (Thanks Fjord!)
-if [[ $STY = '' && $SSH_TTY != '' ]] then screen -xR; fi
+#if [[ $STY = '' && $SSH_TTY != '' ]] then screen -xR; fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -41,6 +41,7 @@ plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-di
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
+unsetopt cdablevars
 
 which dircolors > /dev/null
 if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
@@ -59,7 +60,7 @@ export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
 export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:/opt/jdk/bin:$HOME/bin:$PATH"
 
-export no_proxy="$no_proxy,dbwiki"
+export no_proxy="$no_proxy,src.labs.isgs.lmco.com,nexus.labs.isgs.lmco.com"
 
 function k
 {
@@ -72,3 +73,5 @@ function k
 
     cd $cdback
 }
+
+umask 002
