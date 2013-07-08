@@ -40,3 +40,6 @@
 [submodule "awesome/menubar"]
 	path = awesome/menubar
 	url = https://github.com/griphiam/menubar.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = http://github.com/bling/vim-airline

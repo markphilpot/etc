@@ -32,3 +32,5 @@ else
     set background=dark
 endif
 colorscheme solarized
+
+set laststatus=2
