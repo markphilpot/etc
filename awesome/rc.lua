@@ -339,14 +339,14 @@ globalkeys = awful.util.table.join(
               end),
 
     -- teardrop
-    awful.key({ }, "F12",
-              function ()
-                  teardrop("konsole", "top", "middle", .9, .8, true, 1)
-              end),
-    awful.key({ modkey }, "`",
-              function ()
-                  teardrop("konsole", "top", "middle", .9, .8, true, 1)
-              end),
+    --awful.key({ }, "F12",
+    --          function ()
+    --              teardrop("konsole", "top", "middle", .9, .8, true, 1)
+    --          end),
+    --awful.key({ modkey }, "`",
+    --          function ()
+    --              teardrop("konsole", "top", "middle", .9, .8, true, 1)
+    --          end),
 
     awful.key({ modkey }, "BackSpace", function () awful.util.spawn(lockscreen) end),
 
@@ -572,3 +572,4 @@ run_once("conky", "-c " .. awesome_config .. "/awesome_statusbar")
 run_once("nm-applet")
 run_once("xscreensaver -nosplash")
 run_once("xcompmgr -cF")
+run_once("yakuake")
