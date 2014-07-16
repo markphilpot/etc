@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver"
+FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf"
 
 for i in $FILES
 do

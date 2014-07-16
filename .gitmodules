@@ -43,3 +43,9 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = http://github.com/bling/vim-airline
+[submodule "lib/powerline-fonts"]
+	path = lib/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "lib/vim-colors-solarized"]
+	path = lib/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git

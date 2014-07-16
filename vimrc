@@ -2,6 +2,10 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 " ============ Indentation =============
 set autoindent
 set smartindent
@@ -16,6 +20,7 @@ filetype indent on
 
 " ============ Syntax ==================
 syntax on
+syntax enable
 
 set number
 
@@ -24,13 +29,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e`
 let python_highlight_all = 1
 
 " ============ Solarized ===============
-set t_Co=256
-let g:solarized_termcolors=256
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+set background=dark
 colorscheme solarized
 
 set laststatus=2

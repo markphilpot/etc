@@ -55,7 +55,10 @@ alias sl='screen -ls'
 alias st='screen -t'
 alias open='xdg-open'
 
-export JAVA_HOME="/opt/jdk"
+export POWERLINE_CONFIG_COMMAND="$HOME/Library/Python/2.7/bin/powerline-config"
+
+#export JAVA_HOME="/opt/jdk"
+export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
 export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:/opt/jdk/bin:$HOME/bin:$PATH"
