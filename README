@@ -8,3 +8,7 @@ Dependencies
     * bash-completion
     * git-core
     * ctags/etags
+
+http://stackoverflow.com/questions/4495120/combine-user-with-prefix-error-with-setup-py-install
+
+pip install --user git+git://github.com/Lokaltog/powerline
