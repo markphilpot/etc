@@ -1,6 +1,6 @@
 [user]
 	name = Mark Philpot
-	email = mark.philpot@gmail.com
+	email = mark.philpot@daedafusion.com
 [alias]
     s = status --short --ignore-submodules=dirty
     br = branch
@@ -26,3 +26,21 @@
 [core]
 	quotepath = false
 	editor = vim
+	excludesfile = /Users/mphilpot/.gitignore
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple

@@ -122,7 +122,11 @@ under the License.
       <password>repopwd</password>
     </server>
     -->
-    
+   <server>
+       <id>thedfci</id>
+       <username>mphilpot</username>
+       <password>xMGKxFfvpUWksK26</password>
+    </server>
     <!-- Another sample, using keys to authenticate.
     <server>
       <id>siteServer</id>
