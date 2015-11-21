@@ -1,6 +1,6 @@
 [user]
 	name = Mark Philpot
-	email = mark.philpot@daedafusion.com
+	email = mark.philpot@gmail.com
 [alias]
     s = status --short --ignore-submodules=dirty
     br = branch
@@ -38,7 +38,7 @@
 	trustExitCode = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
