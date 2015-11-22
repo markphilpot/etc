@@ -27,13 +27,13 @@
 	url = http://github.com/phiggins/konsole-colors-solarized.git
 [submodule "awesome/shifty"]
 	path = awesome/shifty
-	url = http://github.com/griphiam/awesome-shifty.git
+	url = http://github.com/markphilpot/awesome-shifty.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = https://github.com/griphiam/oh-my-zsh.git
+	url = https://github.com/markphilpot/oh-my-zsh.git
 [submodule "awesome/menubar"]
 	path = awesome/menubar
-	url = https://github.com/griphiam/menubar.git
+	url = https://github.com/markphilpot/menubar.git
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = http://github.com/bling/vim-airline
