@@ -49,11 +49,10 @@ if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dirco
 # Customize to your needs...
 alias l='$HOME/etc/bin/showlevel'
 alias server='python -m SimpleHTTPServer'
-alias gpm='git co master; git pull; git co develop'
 alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
-alias open='xdg-open'
+#alias open='xdg-open'
 alias cp='rsync -ah --progress'
 
 export POWERLINE_CONFIG_COMMAND="$HOME/Library/Python/2.7/bin/powerline-config"
@@ -63,8 +62,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME="$HOME/etc/maven"
 export MAVEN_OPTS="-XX:MaxPermSize=256M"
 export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:/opt/jdk/bin:$HOME/bin:$PATH"
-
-export no_proxy="$no_proxy,src.labs.isgs.lmco.com,nexus.labs.isgs.lmco.com"
 
 function k
 {
