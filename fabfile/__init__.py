@@ -4,7 +4,7 @@ from fabric.contrib import *
 
 def digitalOceanHosts():
     env.hosts = [
-        'dukeband.org', 'markphilpot.com',
+        'dukeband.org',
     ]
 
 def update():
