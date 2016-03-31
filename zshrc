@@ -52,8 +52,6 @@ alias server='python -m SimpleHTTPServer'
 alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
-#alias open='xdg-open'
-alias cp='rsync -ah --progress'
 
 export POWERLINE_CONFIG_COMMAND="$HOME/Library/Python/2.7/bin/powerline-config"
 
