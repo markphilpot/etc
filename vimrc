@@ -33,3 +33,6 @@ set background=dark
 colorscheme solarized
 
 set laststatus=2
+
+" ============ Nerdtree ================
+map <C-n> :NERDTreeToggle<CR>
