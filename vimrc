@@ -2,10 +2,6 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 " ============ Indentation =============
 set autoindent
 set smartindent
@@ -18,11 +14,26 @@ set expandtab
 filetype plugin on
 filetype indent on
 
+" ============ General =================
+set autoread
+
+set wildmenu
+set wildignore=*.o,*~,*.pyc,.DS_Store
+
+set encoding=utf8
+
+set nobackup
+set noswapfile
+
 " ============ Syntax ==================
 syntax on
 syntax enable
 
 set number
+
+" Show matching brackets and blink 2 tenths of second
+set showmatch
+set mat=2
 
 " ============ Language Specific =======
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e`
