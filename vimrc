@@ -25,6 +25,8 @@ set encoding=utf8
 set nobackup
 set noswapfile
 
+set mouse=a
+
 " ============ Syntax ==================
 syntax on
 syntax enable
@@ -48,4 +50,4 @@ set laststatus=2
 " ============ Shortcuts ================
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
-
+map <C-y> "*y
