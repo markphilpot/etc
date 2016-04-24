@@ -2,3 +2,4 @@
 --exclude=.git
 --recurse
 --python-kinds=-i
+-f .tags

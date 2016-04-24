@@ -45,5 +45,7 @@ colorscheme solarized
 
 set laststatus=2
 
-" ============ Nerdtree ================
+" ============ Shortcuts ================
 map <C-n> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
+
