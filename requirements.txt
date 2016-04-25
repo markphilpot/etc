@@ -5,4 +5,4 @@ sudo apt-get install zsh ctags awesome awesome-extra rxvt-unicode-256color konso
 brew install ctags git htop-osx imagemagick wget vim the_silver_searcher
 
 # Python
-pip install jedi
+pip install jedi Fabric
