@@ -14,3 +14,5 @@ http://stackoverflow.com/questions/4495120/combine-user-with-prefix-error-with-s
 pip install --user git+git://github.com/Lokaltog/powerline
 
 mkdir ~/.cache/awesome
+
+git submodule foreach git pull origin master
