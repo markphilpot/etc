@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf"
+FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf ctags"
 
 for i in $FILES
 do
@@ -12,9 +12,9 @@ do
     ln -s $PWD/$i $HOME/.$i
 done
 
-echo "awesome"
-rm -rf $HOME/.config/awesome
-ln -s $PWD/awesome $HOME/.config/awesome
+#echo "awesome"
+#rm -rf $HOME/.config/awesome
+#ln -s $PWD/awesome $HOME/.config/awesome
 
-echo "Konsole Solarized Dark"
-cp $PWD/lib/konsole-colors-solarized/Solarized\ Dark.colorscheme $HOME/.kde/share/apps/konsole/SolarizedDark.colorscheme
+#echo "Konsole Solarized Dark"
+#cp $PWD/lib/konsole-colors-solarized/Solarized\ Dark.colorscheme $HOME/.kde/share/apps/konsole/SolarizedDark.colorscheme

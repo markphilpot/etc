@@ -37,3 +37,15 @@
 [submodule "lib/vim-colors-solarized"]
 	path = lib/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/bundle/jedi"]
+	path = vim/bundle/jedi
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "vim/bundle/ag"]
+	path = vim/bundle/ag
+	url = https://github.com/rking/ag.vim.git
