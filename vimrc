@@ -17,7 +17,7 @@ filetype indent on
 " ============ General =================
 set autoread
 
-set wildmenu
+set wildmenu                " visual autocomplete for command menu
 set wildignore=*.o,*~,*.pyc,.DS_Store
 
 set encoding=utf8
@@ -51,3 +51,26 @@ set laststatus=2
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 map <C-y> "*y
+
+" ============ Trial ==========
+set cursorline          " highlight current line
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+let mapleader=","       " leader is comma
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" open ag.vim
+nnoremap <leader>a :Ag
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+" Reference
+"
+" :set number/nonumber
+" :so % " Reload vimrc
