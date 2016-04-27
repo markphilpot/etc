@@ -53,6 +53,8 @@ alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
 
+alias by='open -a ByWord.app'
+
 #export JAVA_HOME="/opt/jdk"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME="$HOME/etc/maven"
