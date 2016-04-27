@@ -72,6 +72,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+nnoremap <leader>gb :Gblame<CR>
+set backspace=indent,eol,start
+
 " Reference
 "
 " :set number/nonumber
