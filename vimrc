@@ -50,7 +50,7 @@ set laststatus=2
 " ============ Shortcuts ================
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
-map <C-y> "*y
+map <C-y> "*y           " Copy selection to system clipboard (requires +clipboard)
 
 " ============ Trial ==========
 set cursorline          " highlight current line
@@ -62,7 +62,7 @@ let mapleader=","       " leader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
 " open ag.vim
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag 
 
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
