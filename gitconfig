@@ -1,6 +1,6 @@
 [user]
 	name = Mark Philpot
-	email = mark@mattermark.com
+	email = mark.philpot@google.com
 [alias]
     s = status --short --ignore-submodules=dirty
     br = branch
