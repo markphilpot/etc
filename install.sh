@@ -13,9 +13,9 @@ do
 done
 
 rm $HOME/.vimrc
-ln -s vim/vimrc $HOME/.vimrc
+ln -s $PWD/vim/vimrc $HOME/.vimrc
 rm -rf $HOME/.vim
-ln -s vim/vim $HOME/.vim
+ln -s $PWD/vim/vim $HOME/.vim
 
 #echo "awesome"
 #rm -rf $HOME/.config/awesome
