@@ -25,3 +25,6 @@
 [submodule "lib/vim-colors-solarized"]
 	path = lib/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim"]
+	path = vim
+	url = git@github.com:markphilpot/vimrc.git

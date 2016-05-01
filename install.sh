@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig vimrc vim oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf ctags"
+FILES="bashrc gitconfig oh-my-zsh zshrc screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf ctags"
 
 for i in $FILES
 do
@@ -11,6 +11,11 @@ do
     rm -rf $HOME/.$i
     ln -s $PWD/$i $HOME/.$i
 done
+
+rm $HOME/.vimrc
+ln -s vim/vimrc $HOME/.vimrc
+rm -rf $HOME/.vim
+ln -s vim/vim $HOME/.vim
 
 #echo "awesome"
 #rm -rf $HOME/.config/awesome
