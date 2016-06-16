@@ -44,6 +44,7 @@
 	excludesfile = /Users/mphilpot/.gitignore
 [diff]
 	tool = diffmerge
+    compactionHeuristic = true
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
