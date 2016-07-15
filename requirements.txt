@@ -2,7 +2,7 @@
 sudo apt-get install zsh ctags awesome awesome-extra rxvt-unicode-256color konsole nitrogen qt4-qtconfig xfe weechat rsstail xcompmgr
 
 # Mac
-brew install ctags git htop-osx imagemagick wget vim the_silver_searcher
+brew install ctags git htop-osx imagemagick wget vim the_silver_searcher reattach-to-user-namespace
 
 # Python
 pip install jedi Fabric
