@@ -53,6 +53,9 @@ alias sc='screen -D -R'
 alias sl='screen -ls'
 alias st='screen -t'
 
+alias dc='docker-compose'
+alias dme='eval $(docker-machine env default)'
+
 alias by='open -a ByWord.app'
 
 #export JAVA_HOME="/opt/jdk"
