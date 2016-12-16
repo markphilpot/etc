@@ -3,3 +3,4 @@ vim/.netrwhist
 awesome/awesome_statusbar
 venv/
 *.pyc
+.DS_Store
