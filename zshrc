@@ -63,6 +63,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME="$HOME/etc/maven"
 export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:/opt/jdk/bin:$HOME/bin:$PATH"
 
+# for tmux
+#export DISABLE_AUTO_TITLE='true'
+
 function k
 {
     level=$1
