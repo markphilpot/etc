@@ -36,7 +36,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mvn encode64 git-flow mvn pip supervisor screen osx dircycle per-directory-history django)
+plugins=(git mvn encode64 pip osx dircycle per-directory-history aws docker docker-compose tmux yarn)
 
 source $ZSH/oh-my-zsh.sh
 
