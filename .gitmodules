@@ -28,3 +28,6 @@
 [submodule "vim"]
 	path = vim
 	url = git@github.com:markphilpot/vimrc.git
+[submodule "zprezto"]
+	path = zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
