@@ -13,9 +13,6 @@
 [submodule "awesome/shifty"]
 	path = awesome/shifty
 	url = http://github.com/markphilpot/awesome-shifty.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/markphilpot/oh-my-zsh.git
 [submodule "awesome/menubar"]
 	path = awesome/menubar
 	url = https://github.com/markphilpot/menubar.git
