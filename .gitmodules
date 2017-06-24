@@ -31,3 +31,6 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "per-directory-history"]
+	path = per-directory-history
+	url = https://github.com/jimhester/per-directory-history.git

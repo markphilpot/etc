@@ -11,6 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source ${HOME}/etc/per-directory-history/per-directory-history.zsh
+
 which dircolors > /dev/null
 if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
 
