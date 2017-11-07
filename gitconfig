@@ -41,7 +41,7 @@
 [core]
 	quotepath = false
 	editor = vim
-	excludesfile = /Users/mphilpot/.gitignore
+	excludesfile = /Users/mphilpot/.gitignore_global
 [diff]
 	tool = diffmerge
     compactionHeuristic = true
@@ -61,3 +61,5 @@
 	required = true
 [push]
 	default = simple
+[commit]
+	template = /Users/mphilpot/.stCommitMsg
