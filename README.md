@@ -16,3 +16,5 @@ pip install --user git+git://github.com/Lokaltog/powerline
 mkdir ~/.cache/awesome
 
 git submodule foreach git pull origin master
+
+git submodule update --init --recursive
