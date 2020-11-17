@@ -61,5 +61,3 @@
 	required = true
 [push]
 	default = simple
-[commit]
-	template = /Users/mphilpot/.stCommitMsg
