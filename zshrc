@@ -32,6 +32,9 @@ export PATH="$M2_HOME/bin:$HOME/etc/bin:/opt/local/bin:/opt/jdk/bin:$HOME/bin:$P
 alias drmi="docker images | fzf -m | awk '{print $3}' | xargs docker rmi"
 alias drm="docker ps -a | fzf -m | awk '{print $1}' | xargs docker rm"
 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 function k
 {
     level=$1
