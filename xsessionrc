@@ -1,6 +1,0 @@
-#!/bin/sh
-
-#which xrdb > /dev/null
-#if [[ $? -eq 0 ]] then
-    xrdb -load "${HOME}/.Xresources"
-#fi

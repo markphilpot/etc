@@ -3,7 +3,7 @@
 echo "Installing into $HOME:"
 
 PWD=`pwd`
-FILES="bashrc gitconfig screenrc Xresources fonts.conf xsessionrc xscreensaver tmux.conf tmux-osx.conf ctags editorconfig zlogin zlogout zpreztorc zprofile zshenv zshrc zprezto"
+FILES="bashrc gitconfig fonts.conf tmux.conf tmux-osx.conf ctags editorconfig zlogin zlogout zpreztorc zprofile zshenv zshrc zprezto"
 
 for i in $FILES
 do
