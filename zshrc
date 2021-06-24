@@ -13,8 +13,8 @@ fi
 # Customize to your needs...
 source ${HOME}/etc/per-directory-history/per-directory-history.zsh
 
-which dircolors > /dev/null
-if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
+#which dircolors > /dev/null
+#if [[ $? -eq 0 ]] then eval `dircolors ${HOME}/etc/lib/dircolors-solarized/dircolors.256dark`; fi
 
 alias l='$HOME/etc/bin/showlevel'
 alias server='python -m SimpleHTTPServer'
